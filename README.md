@@ -2,7 +2,7 @@
 
 https://github.com/user-attachments/assets/d9ea5889-0c17-44b6-b945-05e8f0262398
 
-# Safety-Constrained Distributed Control Inference for Multi-ASV Collision Avoidance
+# Safety-Constrained Probabilistic Control Inference for Multi-ASV Collision Avoidance
 
 This repository hosts the high-fidelity **VRX (Virtual RobotX) / Gazebo** physical validation results, numerical simulation benchmarks, and supplementary materials for the manuscript **"Safety-Constrained Distributed Control Inference for Multi-ASV Collision Avoidance"**.
 
@@ -13,7 +13,7 @@ This repository hosts the high-fidelity **VRX (Virtual RobotX) / Gazebo** physic
 
 ## 1. Dynamic Simulation Videos
 
-We validate the proposed **Safety-Constrained Distributed Factor Graph Inference (SC-DFGI)** framework across both high-fidelity 3D marine physical engines (ROS / Gazebo / Native VRX) and numerical dynamic simulations.
+We validate the proposed **Safety-Constrained Factor Graph Inference (SC-DFGI)** framework across both high-fidelity 3D marine physical engines (ROS / Gazebo / Native VRX) and numerical dynamic simulations.
 
 ### 1.1 High-Fidelity VRX / Gazebo Physical Validation (`wamv1` – `wamv4`)
 Real-time multi-ASV antipodal swap and static obstacle avoidance in the **VRX Sydney Regatta** environment ($t \in [0, 69.74]\text{ s}$), subject to 3D wave/hydrodynamic disturbances, full twin-hull WAM-V geometries, and differential thruster dynamics:
@@ -79,7 +79,7 @@ Comparison between the Stage-I nominal control belief (dashed gray) and the Stag
 
 ## 3. Framework Overview
 
-We propose a two-stage **Safety-Constrained Distributed Factor Graph Inference (SC-DFGI)** architecture:
+We propose a two-stage **Safety-Constrained Factor Graph Inference (SC-FGI)** architecture:
 - **Stage I (Distributed Factor Graph Variational Inference):** Infers nominal control beliefs via variational importance sampling and Gaussian moment matching over a local prediction horizon, integrating goal-tracking priors, 3-DOF nonlinear hydrodynamic transitions, static obstacle soft repulsion, and COLREGs-inspired inter-ASV interaction factors.
 - **Stage II (Safety-Constrained MAP / Second-Order HOCBF-QP):** Enforces hard pairwise inter-ASV and obstacle collision avoidance constraints on a look-ahead point (relative degree 2) via symmetric responsibility splitting.
 
